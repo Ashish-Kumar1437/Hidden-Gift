@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
+.name{
+    font-family: 'Nabla', cursive;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+.menu {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 50px; */
+}
+
+a {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    /* border:2px solid black; */
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s;
+    background-color: white;
+    color: aliceblue;
+    width: 40%;
+    text-align: center;
+}
+
+a:hover {
+    letter-spacing: 7px;
+    background-color: var(--color1);
+    color: var(--color1);
+    box-shadow: 0 0 30px var(--color1), 0 0 50px var(--color1);
+}
+
+a::before {
+    content: "";
+    inset: 2px;
+    position: absolute;
+    background-color: rgba(6, 7, 7, 0.967);
+}
+
+span {
+    position: relative;
+    z-index: 1;
+}
+
+i {
+    display: block;
+    inset: 0px;
+    position: absolute;
+}
+
+i::before {
+    content: "";
+    position: absolute;
+    left: 80%;
+    top: -10%;
+    width: 15px;
+    border: 2px solid var(--color2);
+    height: 10px;
+    background-color: rgba(6, 7, 7, 0.967);
+    transition: 0.5s;
+}
+
+a:hover i::before {
+    width: 25px;
+    left: 10%;
+    box-shadow: 0 0 20px var(--color1);
+}
+
+i::after {
+    content: "";
+    position: absolute;
+    right: 80%;
+    bottom: -10%;
+    width: 15px;
+    border: 2px solid var(--color2);
+    height: 10px;
+    background-color: rgba(6, 7, 7, 0.967);
+    transition: 0.5s;
+}
+
+a:hover i::after {
+    width: 25px;
+    right: 10%;
+    box-shadow: 0 0 20px var(--color1);
+}
+
+#easy {
+    --color1: rgb(7, 147, 7);
+    --color2: rgb(18, 210, 47);
+}
+
+#medium {
+    --color1: aqua;
+    --color2: rgb(91, 227, 242);
+}
+
+#hard {
+    --color1: rgb(255, 8, 0);
+    --color2: rgb(242, 106, 91);
+}
+
+@media screen and (max-width:900px) {
+    .menu{
+        width:100%;
+    }
+    a{
+        width:60%;
+    }
+    .name{
+        font-size: 3em;
+    }
+}

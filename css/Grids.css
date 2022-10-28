@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font1: 'Courgette', cursive;
+    --font2: 'Oooh Baby', cursive;
+    --color: linear-gradient(0deg, yellow, orange, green, aqua);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, blue, aqua, yellow, lightgreen, green);
+    padding-top: 5%;
+}
+
+.grid-container {
+    width: 60%;
+    height: 90%;
+    background-color: violet;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(60deg, aqua, yellow, orange, green);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 60%;
+}
+
+.row-index,
+.col-index {
+    position: absolute;
+    font-size: 2.5rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+.row-index {
+    left: 13%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60px;
+}
+
+.col-index {
+    top: 10%;
+    width: 60%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    height: 60px;
+}
+
+.row-index>div,
+.col-index>div {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.reset {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+}
+
+.reset>button {
+    font-family: var(--font1);
+    width: 150px;
+    height: 64px;
+    border-radius: 0px 50px;
+    font-size: 1.3rem;
+}
+
+.gifts {
+    position: absolute;
+    top: 13px;
+    display: flex;
+    gap: 10px;
+    right: 25%
+}
+
+.gifts.div {
+    position: relative;
+}
+
+.gifts>div>span {
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    height: 10px;
+}
+
+.gifts>div>img {
+    width: 25px;
+    height: 25px;
+}
+
+#messageBox {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    /* background-color: rgba(50, 49, 49, 0.53); */
+    background: linear-gradient(90deg, rgba(183, 97, 97, 0.397), rgba(50, 49, 49, 0.53));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#message {
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    clip-path: polygon(47% 3%, 90% 13%, 98% 35%, 96% 66%, 78% 85%, 50% 95%, 29% 86%, 6% 67%, 3% 34%, 18% 6%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Black Ops One', cursive;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.stars{
+    display: flex;
+    gap: 10px;
+}
+
+#messageBox .stars > div:nth-child(2){
+    transform: translateY(-15px);
+}
+#messageBox .stars > .fill{
+    background-color: rgb(255, 208, 0);
+}
+#messageBox .stars > .nofill{
+    background-color: rgba(0, 0, 0, 0.277);
+}
+#messageBox .stars > div{
+    width:60px;
+    height:60px;
+    /* background-color: aqua; */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
+
+
+.btn img{
+    width:20px;
+}
+.btn{
+    display: flex;
+    gap: 15px;
+}
+.btn a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid6x6 .card {
+    width: 15%;
+    height: 15%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.grid4x4 .card {
+    width: 24%;
+    height: 24%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.grid3x3 .card {
+    width: 32%;
+    height: 32%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+/* .card {
+    width: 30%;
+    height: 50%;
+} */
+
+.front {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: yellow;
+    position: relative;
+    z-index: 10;
+}
+
+.backside {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.backside>img {
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (max-width:1200px) {
+    .row-index{
+        left:10%;
+    }
+    #message{
+        width: 75%;
+    }
+}
+@media screen and (max-width:950px) {
+    .row-index{
+        left:5%;
+    }
+    .grid{
+        width: 65%;
+    }
+    .grid3x3 .card{
+        width: 30%;
+        height: 30%;
+    }
+    .row-index>div,.col-index>div{
+        width: 40px;
+    height: 45px;
+    }
+    .col-index{
+        width: 65%;
+        top: 10%;
+    }
+    .gifts{
+        right: 5%;
+    }
+    .reset{
+        right: 5%;
+    }
+}
+@media screen and (max-width:700px) {
+    .grid-container{
+        width: 100%;
+        height: 100vh;
+        justify-content: end;
+    }
+    .grid{
+        width: 80%;
+    }
+    .col-index{
+        width: 80%;
+        top: 12%;
+    }
+    
+}
+@media screen and (max-width:350px) {
+    .row-index{
+        display: none;
+    }
+    .col-index{
+        display: none;
+    }
+    .grid{
+        width: 100%;
+    }
+}
