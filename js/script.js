@@ -138,10 +138,25 @@ function win(stars){
 
 }
 // reset button
-document.querySelector('.reset').addEventListener('click', () => {
-    resetGrid();
-    setTimeout(() => {
-        startGame();
-    }, 200);
+// document.querySelector('.reset').addEventListener('click', () => {
+//     resetGrid();
+//     setTimeout(() => {
+//         startGame();
+//     }, 200);
+// })
+document.querySelector('.reset > button').addEventListener('click', () => {
+    const input=document.getElementById("index");
+    const value=input.value.toLowerCase();
+    let no;
+    const number=parseInt(value[1]);
+    const alphabate=value.charCodeAt(0) - 97;
+    no=(alphabate)*(noOfGifts-1)+parseInt(value[1]);
+    if((number>noOfGifts-1 || alphabate>noOfGifts-1) ||no-1>=cards.length || isNaN(no)){
+        alert("Out of range");
+    }
+    else if(!isNaN(no)) {
+        show(no-1);
+    }
+    input.value="";
 })
 startGame()

@@ -75,15 +75,28 @@ body {
 .reset {
     position: absolute;
     bottom: 5%;
-    right: 20%;
+    right: 10%;
+    /* background: aliceblue; */
+    padding: 10px 20px;
+    border-radius: 50px;
+    /* display: flex;
+    justify-content: end; */
 }
 
 .reset>button {
     font-family: var(--font1);
-    width: 150px;
-    height: 64px;
-    border-radius: 0px 50px;
-    font-size: 1.3rem;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px 50px;
+    font-size: 1rem;
+    background-color: aqua;
+}
+.reset >input{
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    border: 3px solid;
 }
 
 .gifts {
@@ -262,10 +275,13 @@ body {
         right: 5%;
     }
     .reset{
-        right: 5%;
+        right: -10%;
     }
 }
 @media screen and (max-width:700px) {
+    body{
+        padding-top: 0;
+    }
     .grid-container{
         width: 100%;
         height: 100vh;
@@ -280,7 +296,7 @@ body {
     }
     
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:550px) {
     .row-index{
         display: none;
     }
